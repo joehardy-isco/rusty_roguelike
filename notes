@@ -1,0 +1,10 @@
+* Both crates and modules act as namespaces within a project
+* Modules can contain other modules (e.g. module1::module2::...)
+* Crates are the top-level in the crate-module hierarchy (e.g. crate1::crate1_module1::crate1_module1_module_2...)
+* The namespace of the current crate can beaccessed via 'crate'(e.g. crate::module1::...)
+* Everything in a module is private to that module by default. 
+  Use the `pub` keyword to make it accessible from outside of the module.
+
+* Module scope is organized within a tree structure. You can access other parts of the tree with:
+    super:: - this gives you the module immediately above your current module in the module scope tree
+    crate:: - this accesses the root of the tree (main.rs)
